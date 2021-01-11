@@ -1,4 +1,4 @@
-body {
+*, body {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -8,6 +8,7 @@ body {
 header {
   max-width: 83%;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 header h1 {
@@ -25,6 +26,7 @@ header .dots {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  margin-top: 12px;
 }
 
 header .dots p {
@@ -100,11 +102,19 @@ main .img {
 }
 
 .ingredients .right-container {
-  width: 216px;
-  height: 367px;
+  padding: 40px;
+  height: 100%;
   -webkit-box-shadow: 0px 0px 20px rgba(139, 65, 65, 0.1);
           box-shadow: 0px 0px 20px rgba(139, 65, 65, 0.1);
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .ingredients .right-container .box {
@@ -117,7 +127,7 @@ main .img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
+  margin: 1.875rem 0;
 }
 
 .ingredients .right-container .box .fa-utensils-alt {
@@ -161,7 +171,7 @@ main .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 .instructions .main-inst .no-inst p {
@@ -194,5 +204,77 @@ main .img {
   font-size: 16px;
   color: #000000;
   max-width: 536px;
+}
+
+.instructions p {
+  margin: 50px 0;
+  font-style: italic;
+  color: #BDBDBD;
+}
+
+footer {
+  text-align: center;
+  color: #A9A9A9;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  header, main, .ingredients, .instructions {
+    max-width: 95%;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  header .dots p {
+    font-size: 12px;
+  }
+  .ingredients {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .ingredients .left-container {
+    width: 100%;
+  }
+  .ingredients .left-container .main-head {
+    font-size: 18px;
+  }
+  .ingredients .left-container .head {
+    font-size: 16px;
+  }
+  .ingredients .left-container .checkbox p {
+    font-size: 14px;
+  }
+  .ingredients .right-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+  }
+  .ingredients .right-container .box:nth-child(1) {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  .ingredients .right-container .box:nth-child(2), .ingredients .right-container .box:nth-child(3), .ingredients .right-container .box:nth-child(4) {
+    margin: 0 0 0 50px;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  .instructions .main-head {
+    font-size: 18px;
+  }
+  .instructions .main-inst .desc-inst p {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
